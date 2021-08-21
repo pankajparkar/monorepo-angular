@@ -18,7 +18,10 @@
             "tsConfig": "apps/admin/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
-            "styles": ["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css", "apps/admin/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/admin/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -113,6 +116,81 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/admin-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "core-navbar": {
+      "projectType": "library",
+      "root": "libs/core/navbar",
+      "sourceRoot": "libs/core/navbar/src",
+      "prefix": "monorepo-angular",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/navbar"],
+          "options": {
+            "jestConfig": "libs/core/navbar/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/core/navbar/src/**/*.ts",
+              "libs/core/navbar/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "product-details": {
+      "projectType": "library",
+      "root": "libs/product/details",
+      "sourceRoot": "libs/product/details/src",
+      "prefix": "monorepo-angular",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/product/details"],
+          "options": {
+            "jestConfig": "libs/product/details/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/product/details/src/**/*.ts",
+              "libs/product/details/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "product-list": {
+      "projectType": "library",
+      "root": "libs/product/list",
+      "sourceRoot": "libs/product/list/src",
+      "prefix": "monorepo-angular",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/product/list"],
+          "options": {
+            "jestConfig": "libs/product/list/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/product/list/src/**/*.ts",
+              "libs/product/list/src/**/*.html"
+            ]
           }
         }
       }

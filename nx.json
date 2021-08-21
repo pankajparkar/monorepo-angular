@@ -33,6 +33,15 @@
     "admin-e2e": {
       "tags": [],
       "implicitDependencies": ["admin"]
+    },
+    "core-navbar": {
+      "tags": []
+    },
+    "product-details": {
+      "tags": []
+    },
+    "product-list": {
+      "tags": []
     }
   }
 }
